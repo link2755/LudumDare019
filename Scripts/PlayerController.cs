@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public AudioManager audioManager;
     public Animator animator;
 
+    public GameObject shout;
     public Sprite ladraoRoubando;
     public Sprite ladraoAssustado;
 
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Run
+        // RUN ==========================================
 
         acceleration += superAcceleration * Time.deltaTime;
         if (acceleration > 10)
@@ -41,18 +42,18 @@ public class PlayerController : MonoBehaviour
         }
 
         moveSpeed += acceleration * Time.deltaTime;
-        if (moveSpeed > 50)
+        if (moveSpeed > 25)
         {
-            moveSpeed = 50;
+            moveSpeed = 25;
         }
 
         // Animator
         if (jumping <= 0 || jumping > 0.25)
         {
             animator.speed = moveSpeed / 10;
-            if (moveSpeed > 0)
+            if (moveSpeed > 0.1 && moveSpeed <= 2)
             {
-                animator.speed = 1;
+                animator.speed = 0.2f;
             }
             if (moveSpeed <= 0)
             {
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
         movement.x = moveSpeed;
 
-        // Jump
+        // JUMP ===========================================
 
             // Gravity
             if ((jumping <= 0 || jumping > 0.25) && isGrounded == false)
@@ -102,19 +103,27 @@ public class PlayerController : MonoBehaviour
                 jumping = 0;
             }
 
-        // Scream
+        // SCREAM =====================
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            animator.SetBool("Shouting", true);
+            shout.GetComponent<ScreamScript>().active = true;
             gameScript.stress += 25;
+            animator.speed = 1;
+        } else
+        {
+            animator.SetBool("Shouting", false);
+            //shout.GetComponent<ScreamScript>().active = false;
         }
 
-        // Slide
+
+        // MOVEMENT ================================
 
         animator.SetFloat("Jumping", jumping);
-        Debug.Log(jumping);
         myRigidBody.velocity = movement;
 
-        // Reset
+        // RESET =======================
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             gameScript.stress = 0;
@@ -123,6 +132,8 @@ public class PlayerController : MonoBehaviour
             audioManager.Play("Game Song");
             moveSpeed = 0;
             acceleration = 0;
+            animator.Play("Running", -1, 0);
+            animator.speed = 0;
             transform.position = new Vector3(2.40f, -0.58f);
         }
     }
@@ -159,10 +170,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Bandido" )
+        if (other.gameObject.tag == "Bandido")
         {
-            gameScript.pills -= 1;
-            other.gameObject.GetComponent<SpriteRenderer>().sprite = ladraoRoubando;
+            if (other.gameObject.GetComponent<SpriteRenderer>().sprite != ladraoAssustado)
+            {   
+                gameScript.pills -= 1;
+                other.gameObject.GetComponent<SpriteRenderer>().sprite = ladraoRoubando;
+            }
         }
     }
 }
