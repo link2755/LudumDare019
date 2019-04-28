@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 01e2aa083bb37ee42bd9628e6cc8fe4c
+guid: 5d6b33b45c5c87d448cff02c66ca272b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 124785358714606328
-    second: jumping_sprite_sheet_2.0_0
+      213: -7147413152988750702
+    second: building_recolored_2.0_0
   - first:
-      213: -5442642009937750417
-    second: jumping_sprite_sheet_2.0_1
+      213: -1872093267954720622
+    second: building_recolored_2.0_1
   - first:
-      213: 8668571281292041944
-    second: jumping_sprite_sheet_2.0_2
+      213: 1073651101517417437
+    second: building_recolored_2.0_2
   - first:
-      213: 1361269436476683907
-    second: jumping_sprite_sheet_2.0_3
+      213: -415420589386338472
+    second: building_recolored_2.0_3
   - first:
-      213: -6593087931932621756
-    second: jumping_sprite_sheet_2.0_4
-  - first:
-      213: 2306718366274867441
-    second: jumping_sprite_sheet_2.0_5
-  - first:
-      213: -2633662395954513842
-    second: jumping_sprite_sheet_2.0_6
-  - first:
-      213: -1388855600679231590
-    second: jumping_sprite_sheet_2.0_7
+      213: -5561769244730185068
+    second: building_recolored_2.0_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -87,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +89,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,139 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_0
+      name: building_recolored_2.0_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4cafee3de135024a964c2e577926e5a
-      internalID: 124785358714606328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7470e2a8d65c8b94eaa921421433123b
-      internalID: -5442642009937750417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db8167ee2396fcd46997cf205bc78702
-      internalID: 8668571281292041944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 492a305add5624045856e1ef6c4cf101
-      internalID: 1361269436476683907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fac42ac3471c9b4d923a87fdb6cbb71
-      internalID: -6593087931932621756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15f77b855bdcc184ba526a27fd1cfad0
-      internalID: 2306718366274867441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_6
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 64
-        height: 64
+        width: 9
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +113,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db566ad2445a8ca418e7c604099a3b31
-      internalID: -2633662395954513842
+      spriteID: c1dc660c0cf4fdb4db0195717ebb4b58
+      internalID: -7147413152988750702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumping_sprite_sheet_2.0_7
+      name: building_recolored_2.0_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 0
-        width: 64
-        height: 64
+        width: 8
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,8 +134,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a090dfeceae5f54b948377a6e034083
-      internalID: -1388855600679231590
+      spriteID: fe1be43f7536b3d4da788ae7f6da6ced
+      internalID: -1872093267954720622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_recolored_2.0_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7931c2a84e2d145ad2cb026dff4720
+      internalID: 1073651101517417437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_recolored_2.0_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85d11429143e024bb2e22d1f345654d
+      internalID: -415420589386338472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_recolored_2.0_4
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f7afc87ec70df43a31b2ba6237b48b
+      internalID: -5561769244730185068
       vertices: []
       indices: 
       edges: []
@@ -278,7 +206,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e03ad2e1b201d7747947cf49d748b160
+    spriteID: 0db8450adc0a28d4693ce1c23432b021
     internalID: 0
     vertices: []
     indices: 

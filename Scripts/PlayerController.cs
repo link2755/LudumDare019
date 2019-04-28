@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = true;
     public int jumpCount = 0;
     public GameScript gameScript;
+    public AudioManager audioManager;
     public Animator animator;
 
     public Sprite ladraoRoubando;
@@ -34,15 +35,15 @@ public class PlayerController : MonoBehaviour
         // Run
 
         acceleration += superAcceleration * Time.deltaTime;
-        if (acceleration > 7)
+        if (acceleration > 10)
         {
-            acceleration = 7;
+            acceleration = 10;
         }
 
         moveSpeed += acceleration * Time.deltaTime;
-        if (moveSpeed > 30)
+        if (moveSpeed > 50)
         {
-            moveSpeed = 30;
+            moveSpeed = 50;
         }
 
         // Animator
@@ -78,19 +79,21 @@ public class PlayerController : MonoBehaviour
                     movement.y = jumpSpeed/2;
                         if (jumpCount >= 2)
                         {
-                            gameScript.stress += 50;
+                            gameScript.stress += 40;
                         }
                         jumpCount++;
                     jumping += Time.deltaTime;
-            }
+                    animator.speed = 1;
+        }
 
             // Continue Jump
             if (Input.GetKey(KeyCode.Space))
             {
                 jumping += Time.deltaTime;
+                animator.speed = 1;
                 if (jumping > 0 && jumping <= 0.25)
                 {
-                    movement.y += 2f*jumpSpeed * Time.deltaTime;
+                    movement.y += 2.5f*jumpSpeed * Time.deltaTime;
                 }
 
             }
@@ -108,7 +111,20 @@ public class PlayerController : MonoBehaviour
         // Slide
 
         animator.SetFloat("Jumping", jumping);
+        Debug.Log(jumping);
         myRigidBody.velocity = movement;
+
+        // Reset
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gameScript.stress = 0;
+            gameScript.pills = 10;
+            audioManager.Stop("Game Song");
+            audioManager.Play("Game Song");
+            moveSpeed = 0;
+            acceleration = 0;
+            transform.position = new Vector3(2.40f, -0.58f);
+        }
     }
 
 
@@ -116,16 +132,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            moveSpeed = -4;
+            moveSpeed = -2;
             acceleration = 2;
-            movement.y = 8;
+            movement.y = 4;
+            audioManager.Play("Crash");
 
         }
 
         if (other.gameObject.tag == "Chão")
         {
             isGrounded = true;
-            Debug.Log("no Chao");
+            //Debug.Log("no Chao");
             jumpCount = 0;
 
         }
@@ -136,7 +153,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Chão")
         {
             isGrounded = false;
-            Debug.Log("sem Chao");
+            //Debug.Log("sem Chao");
         }
     }
 

@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         stress = (int)gamescript.stress;
-        stressDisplay = "Stress Meter: " + stress.ToString() + "\nPills: " + gamescript.pills.ToString();
+        stressDisplay = stress.ToString() + "\n\n" + gamescript.pills.ToString();
         textObj.GetComponent<Text>().text = stressDisplay;
     }
 }

@@ -17,6 +17,6 @@ public class GameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stress += 5*Time.deltaTime;
+        stress += 8*Time.deltaTime;
     }
 }
